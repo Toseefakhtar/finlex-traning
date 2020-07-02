@@ -1,0 +1,6 @@
+<div *ngIf="isInput" [ngClass]="{'medium-class': size == 'medium', 'large-class':size == 'large', 'small-class':size == 'small' }">
+  <input [type]="type" [formControl]="myFormControl"/>
+</div>
+<div *ngIf="!isInput"  [ngClass]="{'medium-class': size == 'medium', 'large-class':size == 'large', 'small-class':size == 'small' }">
+  <textarea [formControl]="myFormControl"></textarea>
+</div>

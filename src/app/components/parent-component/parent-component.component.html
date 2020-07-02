@@ -1,0 +1,24 @@
+
+<form [formGroup]="myFormFather">
+    <label>
+        Name:
+        <app-child-component type="text" size = "large" [myFormControl] = "myFormFather.get('name')"></app-child-component>
+      </label>
+      <label>
+        Age:
+        <app-child-component type="number" size = "small" [myFormControl] = "myFormFather.get('age')"></app-child-component>
+      </label>
+      <label>
+        Password:
+        <app-child-component type="password" size = "medium" [myFormControl] = "myFormFather.get('password')"></app-child-component>
+      </label>
+      <label>
+        Address:
+        <app-child-component type="textarea" size = "large"  [myFormControl] = "myFormFather.get('address')"></app-child-component>
+    </label>
+</form>
+<div>
+    {{myFormFather.value | json}}
+</div>
+
+
