@@ -15,7 +15,12 @@ import {BrowserAnimationsModule} from
     '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { InfoBoxComponent } from './components/info-box/info-box.component';
+import { DetailsComponent } from './components/details/details.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,9 @@ import {MatButtonModule} from '@angular/material/button';
     ParentComponentComponent,
     ChildComponentComponent,
     BlogComponent,
-    CardComponent
+    CardComponent,
+    InfoBoxComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,11 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     FormsModule,
     MatSliderModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatDividerModule,
+    MatIconModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
