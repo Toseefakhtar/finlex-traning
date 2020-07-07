@@ -12,7 +12,7 @@ export class InfoBoxComponent implements OnInit {
   @Input() title: string;
   @Input() action: string;
   @Input() icon: "user" | "building";
-  @Output() viewDetail : EventEmitter<string> = new EventEmitter<string>();;
+  @Output() actionTrigger : EventEmitter<string> = new EventEmitter<string>();;
   public Icon: IconDefinition;
 
 
@@ -25,8 +25,8 @@ export class InfoBoxComponent implements OnInit {
       this.Icon = faBuilding
     }
   }
-  public viewDetailClicked() {
-    this.viewDetail.emit("clicked");
+  public actionPerformed() {
+    this.actionTrigger.emit("clicked");
   }
 
 }

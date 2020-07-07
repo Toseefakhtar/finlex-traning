@@ -3,13 +3,13 @@
     <div mat-card-avatar><fa-icon [icon]="Icon"></fa-icon></div>
     <mat-card-title>{{ title }}</mat-card-title>
   </mat-card-header>
-  <mat-divider></mat-divider>
-  <mat-card-content>
+  <!-- <mat-divider></mat-divider>   -->
+  <mat-card-content class="mat-content-div">
     <ng-content></ng-content>
   </mat-card-content>
   <mat-card-footer *ngIf="action" class="action-btn-div">
     <div>
-      <button mat-button (click)="viewDetailClicked()">{{ action }}</button>
+      <button mat-button (click)="handleOnClick()">{{ action }}</button>
     </div>
   </mat-card-footer>
 </mat-card>
