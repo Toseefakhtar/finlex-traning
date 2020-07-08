@@ -12,7 +12,7 @@ export class DetailsComponent implements OnInit {
   public ngOnInit(): void {
   }
 
- public handleTriggerAction(msj : string){
-  console.log(msj)
+ public handleTriggerAction(msj: string): void{
+  console.log(msj);
   }
 }

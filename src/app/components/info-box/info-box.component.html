@@ -1,15 +1,14 @@
-<mat-card class="main-card">
+<mat-card class="main-div" #main>
   <mat-card-header>
-    <div mat-card-avatar><fa-icon [icon]="Icon"></fa-icon></div>
+    <!-- <div mat-card-avatar><fa-icon [icon]="Icon"></fa-icon></div> -->
+    <mat-icon mat-card-avatar aria-hidden="false" aria-label="Example home icon">{{icon}}</mat-icon>
     <mat-card-title>{{ title }}</mat-card-title>
   </mat-card-header>
-  <!-- <mat-divider></mat-divider>   -->
   <mat-card-content class="mat-content-div">
     <ng-content></ng-content>
+ 
   </mat-card-content>
-  <mat-card-footer *ngIf="action" class="action-btn-div">
-    <div>
-      <button mat-button (click)="handleOnClick()">{{ action }}</button>
-    </div>
-  </mat-card-footer>
+  <mat-card-actions *ngIf="action" [ngClass]="(divWidth < 200) ? 'action-btn-div-min-length' : 'action-btn-div'">
+    <button mat-button (click)="handleOnClick()">{{ action }}</button>
+  </mat-card-actions>
 </mat-card>
