@@ -1,0 +1,37 @@
+<mat-chip-list aria-label="Fish selection">
+  <mat-chip>One fish</mat-chip>
+  <mat-chip>Two fish</mat-chip>
+  <mat-chip color="primary" selected>Primary fish</mat-chip>
+  <mat-chip color="accent" selected>Accent fish</mat-chip>
+  <mat-chip color="custom-style" selected
+    >Custom Style
+    <mat-icon [ngStyle]="{ color: 'blue' }" matChipRemove *ngIf="removable"
+      >cancel</mat-icon
+    >
+  </mat-chip>
+</mat-chip-list>
+<div class="mat-chip-main">
+  <mat-form-field class="example-chip-list">
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip
+        *ngFor="let fruit of fruits"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(fruit)"
+        color="custom-style"
+      >
+        {{ fruit.name }}
+        <mat-icon [ngStyle]="{ color: 'red' }" matChipRemove *ngIf="removable"
+          >cancel</mat-icon
+        >
+      </mat-chip>
+      <input
+        placeholder="New fruit..."
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="add($event)"
+      />
+    </mat-chip-list>
+  </mat-form-field>
+</div>

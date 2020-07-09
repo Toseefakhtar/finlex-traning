@@ -21,6 +21,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import { FinlexTagComponent } from './components/finlex-tag/finlex-tag.component';
+import { MatChipsComponent } from './components/mat-chips/mat-chips.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { FinlexTagComponent } from './components/finlex-tag/finlex-tag.component
     CardComponent,
     InfoBoxComponent,
     DetailsComponent,
-    FinlexTagComponent
+    FinlexTagComponent,
+    MatChipsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { FinlexTagComponent } from './components/finlex-tag/finlex-tag.component
     MatCardModule,
     MatDividerModule,
     MatIconModule,
+    MatChipsModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],

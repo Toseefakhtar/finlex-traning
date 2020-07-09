@@ -1,0 +1,15 @@
+.example-chip-list {
+  width: 100%;
+}
+.mat-chip-main {
+    margin: 2rem;
+}
+
+.mat-chip.mat-custom-style {
+    background-color: rgba(238, 46, 46, 0.2);
+    margin-right: 2vh;
+    margin-top:1vh;
+    border : 1px solid black;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
