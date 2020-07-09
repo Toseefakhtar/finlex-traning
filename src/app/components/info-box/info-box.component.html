@@ -8,7 +8,7 @@
     <ng-content></ng-content>
  
   </mat-card-content>
-  <mat-card-actions *ngIf="action" [ngClass]="(divWidth < 200) ? 'action-btn-div-min-length' : 'action-btn-div'">
-    <button mat-button (click)="handleOnClick()">{{ action }}</button>
+  <mat-card-actions *ngIf="action" [ngStyle]="{'text-align':actionDirection === 'left' ? 'left' : 'right'}">
+    <button mat-button  (click)="handleOnClick()">{{ action }}</button>
   </mat-card-actions>
 </mat-card>

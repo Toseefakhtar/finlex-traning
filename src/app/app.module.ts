@@ -20,6 +20,7 @@ import { DetailsComponent } from './components/details/details.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
+import { FinlexTagComponent } from './components/finlex-tag/finlex-tag.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatIconModule} from '@angular/material/icon';
     BlogComponent,
     CardComponent,
     InfoBoxComponent,
-    DetailsComponent
+    DetailsComponent,
+    FinlexTagComponent
   ],
   imports: [
     BrowserModule,

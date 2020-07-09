@@ -5,6 +5,20 @@
   height: 100%;
   width: 500px;
 }
-.info-box-size-card-view{
+.info-box-size-card-view {
   height: 100%;
+}
+
+.finlex-component {
+  height: 100%;
+}
+
+.finlex-tag-loop {
+  width: fit-content;
+  margin: 1rem;
+}
+
+.finlex-tag-main {
+  display: flex;
+  flex-wrap: wrap;
 }

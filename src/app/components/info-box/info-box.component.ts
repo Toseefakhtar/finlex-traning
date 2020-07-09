@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -6,21 +6,17 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, AfterViewIni
   templateUrl: './info-box.component.html',
   styleUrls: ['./info-box.component.scss']
 })
-export class InfoBoxComponent implements OnInit, AfterViewInit {
+export class InfoBoxComponent implements OnInit{
 
   @Input() title: string;
   @Input() action: string;
   @Input() icon: string;
-  @Output() actionTrigger: EventEmitter<string> = new EventEmitter<string>();;
-  @ViewChild('main') mainDiv;
-  public divWidth: number;
+  @Input() actionDirection : 'right' | 'left';
+  @Output() actionTrigger: EventEmitter<string> = new EventEmitter<string>();
 
   public constructor() { }
 
   public ngOnInit(): void {
-  }
-  public ngAfterViewInit(): void {
-    this.divWidth = this.mainDiv.__ngContext__[0].offsetWidth;
   }
   public handleOnClick(): void {
     this.actionTrigger.emit('clicked');

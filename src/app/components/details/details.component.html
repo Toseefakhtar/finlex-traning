@@ -12,6 +12,7 @@
       title="Customer"
       icon="home"
       action="view detail"
+      actionDirection="right"
       (actionTrigger)="handleTriggerAction($event)"
     >
       <h4 style="color: blue;">James Schmitz</h4>
@@ -26,11 +27,9 @@
       title="Customer"
       icon="building"
       action="view detail"
+      actionDirection="right"
     >
       <h4 style="color: blue;">James Schmitz</h4>
-      <!-- <h4>Nieder & co</h4>
-                <p>Berlin germany</p>
-                <p>+111-111-111</p> -->
     </app-info-box>
   </div>
 </div>
@@ -49,6 +48,7 @@
       title="Customer"
       icon="home"
       action="view detail"
+      actionDirection="left"
       (actionTrigger)="handleTriggerAction($event)"
     >
       <h4 style="color: blue;">James Schmitz</h4>
@@ -63,6 +63,7 @@
       title="Customer"
       icon="building"
       action="view detail"
+      actionDirection="left"
     >
       <h4 style="color: blue;">James Schmitz</h4>
       <p>Berlin germany</p>
@@ -75,8 +76,17 @@
       title="Customer"
       icon="building"
       action="view detail"
+      actionDirection="left"
     >
       <h4 style="color: blue;">James Schmitz</h4>
     </app-info-box>
+  </div>
+</div>
+<h2>Finlex Tag</h2>
+<div class="finlex-tag-main" >
+  <div class="finlex-tag-loop" *ngFor="let tag of tagsArr">
+    <app-finlex-tag class="finlex-component" [id]="tag.id" (actionTrigger)="handleCloseAction($event)" [type]="tag.type" [disable]="tag.disable" [closeAble]="tag.closeAble">
+      {{tag.name}}</app-finlex-tag
+    >
   </div>
 </div>

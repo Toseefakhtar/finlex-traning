@@ -1,0 +1,27 @@
+<div
+[ngClass]="{
+    brand: (type === 'brand' && disable === 'false'),
+    primary: (type === 'primary' && disable === 'false'),
+    secondary: (type === 'secondary' && disable === 'false'),
+    states: (type === 'states' && disable === 'false'),
+    ternary: (type === 'ternary' && disable === 'false'),
+    'disable-brand': (type === 'brand' && disable === 'true'),
+    'disable-primary': (type === 'primary' && disable === 'true'),
+    'disable-secondary': (type === 'secondary' && disable === 'true'),
+    'disable-states': (type === 'states' && disable === 'true'),
+    'disable-ternary': (type === 'ternary' && disable === 'true')
+  }"
+>
+  <div>
+    <ng-content></ng-content>
+  </div>
+  <div class="close-able" *ngIf="closeAble === 'true'">
+    <mat-icon
+      (click)="handleOnClick()"
+      [ngClass]="disable === 'true' ? 'btn-disable' : 'btn-active'"
+      >close</mat-icon
+    >
+  </div>
+</div>
+
+
